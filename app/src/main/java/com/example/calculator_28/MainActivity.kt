@@ -130,19 +130,6 @@ class MainActivity : AppCompatActivity() {
         isNewOperation = true
     }
 
-    private fun deleteLastDigit() {
-        if (isNewOperation) return
-        if (current.isNotEmpty()) {
-            current = current.dropLast(1)
-            if (current.isEmpty() || current == "-") {
-                current = ""
-                display.text = "0"
-            } else {
-                display.text = current
-            }
-        }
-    }
-
     private fun percentClicked() {
         if (current.isNotEmpty()) {
             val num = current.toDoubleOrNull() ?: return
